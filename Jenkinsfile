@@ -30,9 +30,11 @@ pipeline {
     }
 
     post {
+
         always {
         //print 'Post Steps'
         sh 'echo Post Steps'
         }
+
     }
 }
