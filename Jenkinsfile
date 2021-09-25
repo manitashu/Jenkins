@@ -31,6 +31,8 @@ pipeline {
 
     post {
 
+        agent any
+
         always {
         //print 'Post Steps'
         sh 'echo Post Steps'
