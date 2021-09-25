@@ -50,7 +50,7 @@ pipeline {
     stages {
         stage('One') {
             steps {
-                sh 'echo ${DEMO}'
+                sh 'echo ${DEMO_URL}'
             }
 
         }
