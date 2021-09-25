@@ -42,6 +42,7 @@
 pipeline {
 
     agent any
+    options { disableConcurrentBuilds() }
 
     environment {
         DEMO_URL = "google.com"
