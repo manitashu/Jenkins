@@ -6,7 +6,7 @@ pipeline {
 //         none
 //     }
 
-    agent none
+    agent any
 
     stages {
 
