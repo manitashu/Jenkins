@@ -1,9 +1,9 @@
 pipeline {
 
     agent {
-//      node { label 'workstation'}
-        label 'JAVA'
-        none
+      node { label 'workstation'}
+      label 'JAVA'
+      none
     }
 
     agent any
