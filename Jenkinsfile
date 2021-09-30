@@ -7,9 +7,18 @@ pipeline {
 
     stages {
 
-        stage('One') {
+        stage('Master Node') {
             steps {
                 sh 'echo Hello'
+            }
+        }
+
+        stage('Agent Node') {
+//             agent {
+//                 label 'JAVA'
+//             }
+            steps {
+                sh 'echo Hi'
             }
         }
     }
