@@ -27,11 +27,11 @@ pipeline {
                 sh 'echo Hi'
             }
         }
+    }
 
-        post {
-            always {
-                sh 'echo Post Steps'
-            }
+    post {
+        always {
+            sh 'echo Post Steps'
         }
     }
 }
