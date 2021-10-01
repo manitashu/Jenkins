@@ -1,10 +1,12 @@
 pipeline {
 
-    agent {
-        node { label 'workstation'}
-        label 'JAVA'
-    }
+//     agent {
+//         node { label 'workstation'}
+//         label 'JAVA'
+//         none
+//     }
 
+    agent any
 
     stages {
 
