@@ -1,37 +1,54 @@
-pipeline {
-
+// pipeline {
+//
 //     agent {
 //         node { label 'workstation'}
 //         label 'JAVA'
 //         any
 //     }
+//
+//     agent any
+//
+//     stages {
+//
+//         stage('Master Node') {
+//             agent {
+//                 label 'MASTER'
+//             }
+//             steps {
+//                 sh 'echo Hello'
+//             }
+//         }
+//
+//         stage('Agent Node') {
+//             agent {
+//                 label 'JAVA'
+//             }
+//             steps {
+//                 sh 'echo Hi'
+//             }
+//         }
+//     }
+//
+//     post {
+//         always {
+//             sh 'echo Post Steps'
+//         }
+//     }
+// }
 
+pipeline {
     agent any
 
-    stages {
-
-        stage('Master Node') {
-            agent {
-                label 'MASTER'
-            }
-            steps {
-                sh 'echo Hello'
-            }
-        }
-
-        stage('Agent Node') {
-            agent {
-                label 'JAVA'
-            }
-            steps {
-                sh 'echo Hi'
-            }
-        }
+    environment {
+        DEMO_URL = "google.com"
     }
 
-    post {
-        always {
-            sh 'echo Post Steps'
+    stages {
+        stage('One') {
+            steps {
+                sh 'echo ${DEMO_URL}'
+//                 echo "${SSH_USR}"
+            }
         }
     }
 }
