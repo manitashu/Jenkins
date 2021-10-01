@@ -6,7 +6,7 @@ pipeline {
 //         any
 //     }
 
-    agent none
+    agent any
 
     stages {
 
@@ -30,4 +30,13 @@ pipeline {
             }
         }
     }
+
+    post {
+
+            always {
+            //print 'Post Steps'
+            sh 'echo Post Steps'
+            }
+
+        }
 }
