@@ -1,42 +1,13 @@
 pipeline {
-
-//     agent {
-//         node { label 'workstation'}
-//         label 'JAVA'
-//         any
-//     }
-
-    agent any
+    agent {
+        node { label 'workstation'}
+    }
 
     stages {
-
-        stage('Master Node') {
-
-            agent {
-                label 'MASTER'
-            }
-            steps {
+        stage{
+            steps{
                 sh 'echo Hello'
             }
         }
-
-        stage('Agent Node') {
-
-            agent {
-                label 'JAVA'
-            }
-            steps {
-                sh 'echo Hi'
-            }
-        }
     }
-
-    post {
-
-            always {
-            //print 'Post Steps'
-            sh 'echo Post Steps'
-            }
-
-        }
 }
