@@ -81,7 +81,7 @@ pipeline {
 
         stage('Three') {
             steps {
-                sh 'Three'
+                echo 'Three'
             }
         }
     }
