@@ -29,9 +29,6 @@ pipeline {
         }
 
         post {
-
-            agent any
-
             always {
                 sh 'echo Post Steps'
             }
