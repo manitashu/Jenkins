@@ -27,6 +27,13 @@ pipeline {
                 sh 'echo Hi'
             }
         }
+
+        post {
+            always {
+//                 print 'Post Steps'
+                sh 'echo Post Steps'
+            }
+        }
     }
 }
 
