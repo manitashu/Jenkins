@@ -9,7 +9,7 @@ pipeline {
 
      stages {
 
-        stage('One') {
+        stage('Master Node') {
 
 //             agent {
 //                 label 'MASTER'
@@ -19,14 +19,14 @@ pipeline {
             }
         }
 
-//         stage('Agent Node') {
+        stage('Agent Node') {
 //
 //             agent {
 //                 label 'JAVA'
 //             }
-//             steps {
-//                 sh 'echo Hi'
-//             }
-//         }
+            steps {
+                sh 'echo Hi'
+            }
+        }
     }
 }
