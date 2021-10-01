@@ -1,29 +1,30 @@
 pipeline {
 
-    agent {
+//     agent {
 //         node { label 'workstation'}
-        label 'JAVA'
+//         label 'JAVA'
 //         any
-    }
+//     }
 
+    agent none
 
-     stages {
+    stages {
 
         stage('Master Node') {
 
-//             agent {
-//                 label 'MASTER'
-//             }
+            agent {
+                label 'MASTER'
+            }
             steps {
                 sh 'echo Hello'
             }
         }
 
         stage('Agent Node') {
-//
-//             agent {
-//                 label 'JAVA'
-//             }
+
+            agent {
+                label 'JAVA'
+            }
             steps {
                 sh 'echo Hi'
             }
