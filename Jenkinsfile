@@ -64,6 +64,12 @@ pipeline {
                  echo "${SSH_USR}"
             }
         }
+
+        stage('Compile') {
+            steps {
+                sh 'mvn clean'
+            }
+        }
     }
 }
 
