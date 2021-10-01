@@ -1,7 +1,8 @@
 pipeline {
 
     agent {
-        node { label 'workstation'}
+//         node { label 'workstation'}
+        label 'JAVA'
     }
 
     stages {
@@ -13,3 +14,4 @@ pipeline {
         }
     }
 }
+
